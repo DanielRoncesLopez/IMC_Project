@@ -10,6 +10,8 @@ class CalculadoraIMC():
         while not self.nombre:
             try:
                 self.nombre = str(input("Ingrese su nombre(s): "))
+                if not self.nombre:
+                    print('Este dato no puede quedar vacio')
                 _ = float(self.nombre)
                 print("Ingrese un nombre valido")
                 self.nombre = ""
@@ -18,6 +20,8 @@ class CalculadoraIMC():
         while not self.apellidoPaterno:
             try: 
                 self.apellidoPaterno = str(input("Ingrese su apellido paterno: "))
+                if not self.apellidoPaterno:
+                    print('Este dato no puede quedar vacio')
                 _ = float(self.apellidoPaterno)
                 print("Ingrese un apellido valido")
                 self.apellidoPaterno = ""
@@ -25,7 +29,9 @@ class CalculadoraIMC():
                 pass
         while not self.apellidoMaterno:
             try: 
-                self.apellidoMaterno = str(input("Ingrese su apellido paterno: "))
+                self.apellidoMaterno = str(input("Ingrese su apellido materno: "))
+                if not self.apellidoMaterno:
+                    print('Este dato no puede quedar vacio')
                 _ = float(self.apellidoMaterno)
                 print("Ingrese un apellido valido")
                 self.apellidoMaterno = ""
@@ -34,16 +40,22 @@ class CalculadoraIMC():
         while not self.edad:
             try: 
                 self.edad = int(input("Ingrese su edad: "))
+                if not self.edad:
+                    print('Este dato no puede quedar vacio')
             except:
                 print("Ingrese una edad valida")
         while not self.peso:
             try:
                 self.peso = float(input("Ingrese su peso en kilogramos: "))
+                if not self.peso:
+                    print('Este dato no puede quedar vacio')
             except:
                 print("Ingrese un peso valido")
         while not self.estatura:
             try:
                 self.estatura = float(input("Ingrese su estatura en metros: "))
+                if not self.estatura:
+                    print('Este dato no puede quedar vacio')
             except:
                 print("Ingrese una altura valida")
 
@@ -73,9 +85,9 @@ class CalculadoraIMC():
         print("*****************************************************************************")
         print("****************************   RESULTADOS  **********************************")
         print("*****************************************************************************")
-        print("Nombre del Usuario: " + nombre +" "+ apellidoPaterno +" "+ apellidoMaterno)
-        print("Edad: %s años" %edad)
-        print("Peso: %s kilogramos" %peso)
-        print("Altura: %s metros" %estatura)
-        print("IMC: %s" %(imc))
-        print("Clasificacion = " + clasificacion)
+        print("Nombre del Usuario:   " + nombre +" "+ apellidoPaterno +" "+ apellidoMaterno)
+        print("Edad:                 %s años" %edad)
+        print("Peso:                 %s kilogramos" %peso)
+        print("Altura:               %s metros" %estatura)
+        print("IMC:                  %s" %(imc))
+        print("Clasificacion =       " + clasificacion)
